@@ -22,5 +22,12 @@ export class AppComponent {
 {
   return n1+n2;
 }
+listarestudiante:any[]=[
+
+  {nombre:'ivar',apellido:'gutierrez',estado:'AP'},
+  {nombre:'pedro',apellido:'herrera',estado:'PR'},
+  {nombre:'carla',apellido:'gareca',estado:'AP'},
+  {nombre:'juan',apellido:'bautista',estado:'PR'}
+]
 }
 

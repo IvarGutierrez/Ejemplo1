@@ -8,4 +8,20 @@
 <button class="btn btn-primary" (click)="cambiartexto()">aceptar</button>
 <br>
 <input type="text" class="form-control" placeholder="escribe aqui tu nombre" [(ngModel)]="texto1"/>{{texto1}}
-
+<br>
+<table class="table">
+    <thead>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Estado</th>
+</thead>
+<tbody>
+    <tr *ngFor="let lista of listarestudiante; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{lista.nombre}}</td>
+        <td>{{lista.apellido}}</td>
+        <td>{{lista.estado}}</td>
+    </tr>
+</tbody>
+</table>
