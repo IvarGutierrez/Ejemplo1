@@ -1,0 +1,38 @@
+<p>Ingrese su valor1</p>
+
+<input type="number" class="form-control" [(ngModel)]="n1" >
+<p>Ingrese su valor2</p>
+
+<input type="number" class="form-control" [(ngModel)]="n2" >
+<div *ngIf="n2==0">
+    <p>
+        <select [(ngModel)]="operacion" >
+            <option value="ninguno">eliga una opcion</option>
+            <option value="suma">escogio suma</option>
+            <option value="resta">ewscogio resta</option>
+            <option value="multiplicacion">escogio multiplicacion</option>
+        </select>
+    </p>
+</div>
+<div *ngIf="n2>0">
+<p>
+    <select [(ngModel)]="operacion" >
+        <option value="ninguno">eliga una opcion</option>
+        <option value="suma">escogio suma</option>
+        <option value="resta">ewscogio resta</option>
+        <option value="multiplicacion">escogio multiplicacion</option>
+        <option value="division">escogio division</option>
+    </select>
+</p>
+</div>
+<p>
+    resultado es:
+    <span [ngSwitch]="operacion">
+        <span *ngSwitchCase="'suma'">{{n1+n2}}</span>
+        <span *ngSwitchCase="'resta'">{{n1-n2}}</span>
+        <span *ngSwitchCase="'multiplicacion'">{{n1*n2}}</span>
+        <span *ngSwitchCase="'diviSion'" >{{n1/n2}}</span>
+        <span *ngSwitchDefault>no escogio operacion</span>
+
+    </span>
+</p>
